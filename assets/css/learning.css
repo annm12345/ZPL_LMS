@@ -1,0 +1,169 @@
+/*================================Learning ========================================*/
+
+.learning{
+    margin-top: 3rem;
+}
+.learning-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+.learning-right>h1{
+   margin: 1.6rem 0 2.5rem; 
+   text-align: center;
+}
+.learning-left>p{
+    margin: 1.6rem 0 2.5rem; 
+    text-align: center;
+ }
+ 
+.learning-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+.learning-card{
+    background-color: #c5d1ac;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    text-align: center;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+}
+.learning-card:hover{
+background:#c4e481 ;
+box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+.learning-card a>h3{
+    color: #000;
+}
+.span-icon{
+    color: rgb(50, 11, 224);
+    padding: 1rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+}
+.learning-card:nth-child(1) .span-icon{
+    color: rgb(27, 202, 50);
+}
+.learning-card:nth-child(2) .span-icon{
+    color: rgb(212, 44, 190);
+}
+.learning-card:nth-child(3) .span-icon{
+    color: rgb(11, 70, 85);
+}
+
+/*=================Students=======================*/
+.students h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.team_container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.team_member{
+    background: var(--color-bg-1);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transiton);
+    position: relative;
+    overflow: hidden;
+}
+.team_member:hover{
+    background: transparent;
+    border-color: #565058;
+}
+.team_member_image img{
+    width: 100%;
+    filter: saturate(0);
+}
+.team_member:hover img{
+    filter: saturate(1);
+}
+.team_member_info * {
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.team_member_socials{
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 1rem ;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    -webkit-border-radius: 1rem ;
+    -moz-border-radius: 1rem ;
+    -ms-border-radius: 1rem ;
+    -o-border-radius: 1rem ;
+}
+.team_member:hover .team_member_socials{
+    right: 85px;
+}
+.team_member_socials h4{
+    padding: 1rem;
+}
+
+/*======================Query Tablet============*/
+@media screen and (max-width:1024px) {
+    .learning{
+        margin-top: 2rem;
+    }
+    .learning-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .team_container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+    .team_member_socials{
+        right: -200px;
+    }
+    .team_member:hover .team_member_socials{
+        right: 60px;
+    }
+}
+@media screen and (max-width:600px) {
+    .learning-cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.5rem;
+    }
+    .team_container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+    .team_member_socials{
+        top: 30%;
+    }
+    .team_member:hover .team_member_socials{
+        right: 30px;
+    }
+    
+}
